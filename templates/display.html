@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<title>
+   list of web pages
+</title>
+</head>
+   <body>
+      <h2 style="text-align: center;
+   margin-top: 50px; font-family: 'Comic Sans MS';">List of Search Results</h2>
+      <table border = 1  style="margin-left: 250px;">
+         <form  action="http://localhost:80/output" method="POST">
+         {% for key, value in urls.items() %}
+            <tr>    
+               <th> {{ key }} </th>
+               <td> <div class="checkbox"><label><input type="checkbox" name="check" value="{{value}}"> {{ value }} </label></div></td>
+            </tr>
+         {% endfor %}
+      <br>
+      </tr></table>
+      <br>
+      <input type="submit" name="submit" value="Submit Query" 
+      style="padding: 10px;
+            font-size: 15px;
+            color: black;
+            background: #1F4788  ;
+            border: 1px;
+            color:#fff;
+            border-radius: 5px;
+            margin-left: 800px;
+            font-weight: bold;">   
+</form>
+
+  <br>
+  <br>
+  <br><br>
+  <br>
+   <footer style=" position : fixed;
+                   left: 0;
+                   bottom: 0;
+                   width: 100%;
+                  margin-top: 120px;
+                  background: #021428;
+                  height: 65px;
+                  color: white;
+                  line-height: 4;
+                  font-size: 20px;
+                  text-align: center;">
+      Feedback &copy; System
+      
+   </footer>
+   </body>
+</html>

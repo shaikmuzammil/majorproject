@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+</head>
+   <body>
+      <h2 style="font-size: 50px;
+   text-align: center;
+   margin-top: 100px;
+   font-family: 'Comic Sans MS'"><span style="color:#0074D9">F</span><span style="color:green">e</span><span style="color:#DC3D24">e</span><span style="color:orange">d</span><span style="color:#001f3f">B</span><span style="color:red">a</span><span style="color:green">c</span><span style="color:blue">k</span></h2>
+
+         
+         <p style="font-family: 'Comic Sans MS';margin-left: 45px"> As your web page does not fullfill the factors of the search engine. When compared with the first website in results with your webpage. 
+          </p> 
+          {% if ur[0][1] | float > ur[1][1] | float %}  <p style="font-family: 'Comic Sans MS';margin-left: 85px">AS loading time is less with first web page, It's good!!! but some factors may not up to mark.</p>
+            {% else %}
+               <p style="font-family: 'Comic Sans MS';margin-left: 85px"> AS loading time is more compared to first webpage Do Minify and combine files, Refer JavaScript loading, Choose the right hosting option for your needs </p>
+            {% endif %}
+            <!--value[1:].split(',')[1]-->
+            {% if ur[0][2] | int > ur[1][2] | int %}
+            <p style="font-family: 'Comic Sans MS';margin-left: 85px">As images are less in your page with compare to first page and provide the images with as the content is easily understand</p>
+            {% elif ur[0][2] | int == ur[1][2] | int %}
+            <p style="font-family: 'Comic Sans MS';margin-left: 85px"> AS images are equal  with first web page but some factors may not up to mark.</p>
+            {% else %}
+            <p style="font-family: 'Comic Sans MS';margin-left: 85px">As images are more when compared with first page, remove the unnecessary images which helps in loading fast your webpage</p>
+            {% endif %}
+            {% if ur[0][3] | int > ur[1][3] | int %}
+             <p style="font-family: 'Comic Sans MS';margin-left: 85px">As links are less, Not about the links have more inbound links to your page which helps to increase your page rank</p>
+            {% else %}
+            <p style="font-family: 'Comic Sans MS';margin-left: 85px"> As links are more , shorten the links and have more inbound links which helps to increase page rank</p>
+            {% endif %}
+
+            {% if ur[1][4] | int < 1800 %}
+            <p style="font-family: 'Comic Sans MS';margin-left: 85px">The minimum number of words in web page should contain atleast 1800, provide the content with explanation.</p>
+            {% else %}
+            <p style="font-family: 'Comic Sans MS';margin-left: 85px">Your page having the optimised content but some of factors are less so, concentrate on those factors. </p>
+            {% endif %}
+            
+
+         
+
+      <footer style=" position : fixed;
+                   left: 0;
+                   bottom: 0;
+                   width: 100%;
+                  margin-top: 120px;
+                  background: #021428;
+                  height: 65px;
+                  color: white;
+                  line-height: 4;
+                  font-size: 20px;
+                  text-align: center;">
+      Feedback &copy; System
+      
+   </footer>
+   </body>
+</html>

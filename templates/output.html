@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+</head>
+   <body>
+      <h2 style="text-align: center;
+   margin-top: 50px; font-family: 'Comic Sans MS';">Difference of webpages</h2>
+   <form  action="http://localhost:5010/feed" method="POST" name="box">
+    <div class="row">
+      <div class="column">
+      <table border = 1 width="70%" style="margin-left: 250px;">
+         {% for key, value in ur.items() %}
+            <tr>
+               <td><b>website link</b></td></tr>
+            <tr>
+              <td><!--<input type="checkbox" name="ke" value="{{value}}"-->{{ key }} </td></tr>
+
+            <!--  <th><input type="checkbox" name="va" value="{{value}}">{{ value }} </th></tr>-->
+
+              <tr>
+               <td> <!--<input type="checkbox" name="va" value="{{value[0]}}">-->load time {{ value[0] }} </td></tr>
+               <tr><!--<td><input type="checkbox" name="vb" value="{{value[1]}}">--><td>image count {{ value[1] }} </td></tr>
+              <tr><!--<td><input type="checkbox" name="vc" value="{{ value[2]}}">--><td>link count {{ value[2] }} </td></tr>
+              <tr><td>content count {{ value[3] }} </td></tr>
+         {% endfor %}
+      </table>
+    </div>
+    <div class="column">
+      <img src = "{{url_for('send_image', filename=img_name)}}" style="margin-left:250px;" alt="plot">
+    </div>
+      <br>
+      <input type="submit" name="submit" href="feed.html"
+      style="padding: 10px;
+            font-size: 15px;
+            color: black;
+            background: #1F4788  ;
+            border: 1px;
+            color:#fff;
+            border-radius: 5px;
+            margin-left: 800px;
+            font-weight: bold;" value="Feedback">
+            </form>  
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <footer style=" position : fixed;
+                   left: 0;
+                   bottom: 0;
+                   width: 100%;
+                  margin-top: 120px;
+                  background: #021428;
+                  height: 65px;
+                  color: white;
+                  line-height: 4;
+                  font-size: 20px;
+                  text-align: center;">
+      Feedback &copy; System
+      
+   </footer>
+   </body>
+</html>
